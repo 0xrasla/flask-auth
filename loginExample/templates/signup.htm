@@ -1,0 +1,43 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+{% if title %}
+<title>Auth | {{ title }}</title>
+
+{% else %}
+<title>Auth | SignUp</title>
+{% endif %}
+{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <div class="inner">
+        <h1>SignUp</h1>
+        <form action="/auth/signup" method="POST">
+            <div class="form_">
+                <label for="username">Username</label>
+                <input type="text" name="username" required>
+            </div>
+            <div class="form_">
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form_">
+                <label for="password">Password</label>
+                <input type="password" name="password" required minlength="8">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}">login page</a>.
+    </div>
+    {% endif %}
+    {% endwith %}
+</div>
+
+
+{% endblock body %}

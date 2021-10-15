@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+body {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Architects Daughter", cursive;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .container h1 {
+  padding: 0;
+  margin: 0;
+}
+
+body .container .inner {
+  background-color: chocolate;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+body .container .form {
+  padding-top: 10px;
+}
+
+body .container .form_ {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+body .container .form_ input {
+  font-family: "Architects Daughter", cursive;
+}
+
+body .container label {
+  padding-top: 10px;
+}
+
+body .container button {
+  margin-top: 10px;
+  padding: 6px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

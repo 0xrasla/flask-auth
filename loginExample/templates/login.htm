@@ -1,0 +1,43 @@
+{% extends 'base.htm' %}
+
+{% block title %}
+{% if title %}
+<title>Auth | {{ title }}</title>
+
+{% else %}
+<title>Auth | Login</title>
+{% endif %}
+{% endblock title %}
+
+{% block body %}
+
+<div class="container">
+    <div class="inner">
+        <h1>Login</h1>
+        <form action="/auth/login" method="POST">
+            <div class="form_">
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="form_">
+                <label for="password">Password</label>
+                <input type="password" name="password" required minlength="8">
+            </div>
+            <div class="form">
+                <label for="remember">Remember Me</label>
+                <input type="checkbox" name="remember">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}.</a>.
+    </div>
+    {% endif %}
+    {% endwith %}
+</div>
+
+
+{% endblock body %}

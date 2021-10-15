@@ -1,2 +1,3 @@
 # flask_authentication
-# flask_authentication
+
+pip install -r requirements.txt

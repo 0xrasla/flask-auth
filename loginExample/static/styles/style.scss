@@ -1,0 +1,59 @@
+@mixin flexCentre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+  background-color: black;
+  color: white;
+  display: flex;
+  font-family: "Architects Daughter", cursive;
+
+  .container {
+    @include flexCentre();
+
+    h1 {
+      padding: 0;
+      margin: 0;
+    }
+
+    .inner {
+      background-color: chocolate;
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .form {
+      padding-top: 10px;
+    }
+
+    .form_ {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        font-family: "Architects Daughter", cursive;
+      }
+    }
+
+    label {
+      padding-top: 10px;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 6px;
+      background-color: white;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  }
+}
